@@ -1,18 +1,38 @@
 <template>
   <v-app>
     <v-app-bar app>
+      <button onclick="history.back()">
+        <v-icon>mdi-keyboard-backspace</v-icon>
+      </button>
+      <!--
+      <v-btn @click=""><v-icon>mdi-keyboard-backspace</v-icon></v-btn>
+
+      <v-app-bar-nav-icon>
+        <nuxt-link to="/">
+          <v-icon>mdi-keyboard-backspace</v-icon>
+        </nuxt-link>
+      </v-app-bar-nav-icon>
+      -->
+      <v-toolbar-items>
+        <v-btn class="title" nuxt to="/" text>Top画面へ</v-btn>
+      </v-toolbar-items>
+      <v-toolbar-items>
+        <v-btn class="title" nuxt to="login" text>ログアウト</v-btn>
+      </v-toolbar-items>
+      <v-spacer></v-spacer>
+      <!--
       <v-app-bar-nav-icon>
         <nuxt-link to="/" tag="div">
           <v-icon>mdi-bank</v-icon>
         </nuxt-link>
       </v-app-bar-nav-icon>
+      -->
       <v-toolbar-title>
         <p class="body-1 my-0">{{ bank | name }}</p>
         <p class="body-1 my-0">{{ branch | name }}</p>
       </v-toolbar-title>
-      <v-spacer></v-spacer>
       <v-toolbar-items>
-        <v-btn class="title" nuxt to="login" text>{{ account | name }}様</v-btn>
+        <v-btn class="title" nuxt to="/" text>{{ account | name }}様</v-btn>
       </v-toolbar-items>
     </v-app-bar>
     <v-content>
