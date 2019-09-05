@@ -16,7 +16,7 @@
         明細
       </v-btn>
     </div>
-    <v-btn id="btn" class="orange" fab dark large>
+    <v-btn id="btn" class="red" dark large>
       {{ account.total | yen }}
     </v-btn>
   </div>

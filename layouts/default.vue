@@ -14,7 +14,7 @@
       </v-app-bar-nav-icon>
       -->
       <v-toolbar-items>
-        <v-btn class="title" nuxt to="/" text>Top画面へ</v-btn>
+        <v-btn class="title" to="/" text>Top画面へ</v-btn>
       </v-toolbar-items>
       <v-toolbar-items>
         <v-btn class="title" nuxt to="login" text>ログアウト</v-btn>
@@ -31,9 +31,17 @@
         <p class="body-1 my-0">{{ bank | name }}</p>
         <p class="body-1 my-0">{{ branch | name }}</p>
       </v-toolbar-title>
+      <!--
       <v-toolbar-items>
         <v-btn class="title" nuxt to="/" text>{{ account | name }}様</v-btn>
       </v-toolbar-items>
+      -->
+      <v-toolbar-title>
+        <p class="body-3 my-10 ml-3">{{ account | name }}様</p>
+        <!-- https://vuetifyjs.com/en/styles/spacing を参照-->
+      </v-toolbar-title>
+
+
     </v-app-bar>
     <v-content>
       <v-container fluid>
